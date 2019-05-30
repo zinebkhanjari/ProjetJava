@@ -5,7 +5,7 @@ public class Adherent {
 	private int idAd;
 	private String nomAd;
 	private String prenomAd;
-	private String emailAd;
+	static String emailAd;
 	private String telAd;
 	private String niveauAd;
 	
@@ -17,7 +17,7 @@ public class Adherent {
 		
 	}
 	
-	public String getEmailAd() {
+	public static String getEmailAd() {
 		return emailAd;
 	}
 
@@ -27,8 +27,8 @@ public class Adherent {
 	public void setTelAd(String telAd) {
 		this.telAd = telAd;
 	}
-	public void setEmailAd(String emailAd) {
-		this.emailAd = emailAd;
+	public static void setEmailAd(String emailAd) {
+		Adherent.emailAd = emailAd;
 	}
 	public Adherent(String nomAd, String prenomAd, String emailAd, String telAd, String niveauAd) {
 		super();
