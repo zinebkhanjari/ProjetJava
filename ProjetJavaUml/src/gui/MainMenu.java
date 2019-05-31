@@ -93,15 +93,15 @@ public class MainMenu extends JFrame {
 		contentPane.add(btnNewButton_4);
 		
 		JLabel lblGestionAdherents = new JLabel("gestion adherents");
-		lblGestionAdherents.setBounds(52, 564, 123, 14);
+		lblGestionAdherents.setBounds(69, 564, 134, 14);
 		contentPane.add(lblGestionAdherents);
 		
 		JLabel lblCalendrierDesEvenements = new JLabel("calendrier des evenements ");
-		lblCalendrierDesEvenements.setBounds(320, 564, 134, 14);
+		lblCalendrierDesEvenements.setBounds(290, 564, 168, 14);
 		contentPane.add(lblCalendrierDesEvenements);
 		
 		JLabel lblGestionDabsence = new JLabel("Gestion d'absence");
-		lblGestionDabsence.setBounds(594, 564, 105, 14);
+		lblGestionDabsence.setBounds(584, 564, 134, 14);
 		contentPane.add(lblGestionDabsence);
 		
 		JLabel label = new JLabel("");

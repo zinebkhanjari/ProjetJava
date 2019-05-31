@@ -136,7 +136,7 @@ public class Authentification extends JFrame {
 							connecté=true;
 							 
 						}
-					  else  if(email.equals("zkhanjari4@gmail.com") && password.equals("zinebkh123"))
+					  else  if(email.equals("adminItwave@gmail.com") && password.equals("adminadmin"))
 							{
 								MainMenu menu=new MainMenu();
 								menu.setVisible(true);
@@ -170,7 +170,7 @@ public class Authentification extends JFrame {
 		lblMotDePasse.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				JOptionPane.showMessageDialog(null, "merci d'envoyer vos cordonnées à l'adresse email zkhanjari4@gmail.com afin de recuperer votre compte");
+				JOptionPane.showMessageDialog(null, "merci d'envoyer vos cordonnées à l'adresse email 	adminItwave@gmail.com afin de recuperer votre compte");
 			}
 		});
 		lblMotDePasse.setForeground(Color.RED);

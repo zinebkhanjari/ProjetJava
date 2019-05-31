@@ -172,6 +172,10 @@ public class GestionAdherent extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				emailAd=emailField.getText();	
 				PreparedStatement myStmt=null;
+	int j=JOptionPane.showConfirmDialog(null, "Vous voullez supprimer cette absence ?","supprimer absence",JOptionPane.YES_NO_OPTION);
+				
+				
+				if(j==0) {
 				try {
 					myStmt=conx.prepareStatement("delete from adherent where emailAd=?");
 					myStmt.setString(1,emailAd);
@@ -200,7 +204,7 @@ public class GestionAdherent extends JFrame {
 					// TODO: handle exception
 				}
 				
-				}
+				}}
 			}
 		});
 		btnModifier.setBounds(437, 502, 89, 59);

@@ -182,7 +182,10 @@ public class GestionAbsence extends JFrame {
 		button_1.setBackground(Color.WHITE);
 		button_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				int j=JOptionPane.showConfirmDialog(null, "Vous voullez supprimer cette absence ?","supprimer absence",JOptionPane.YES_NO_OPTION);
+				System.out.print(j);
 				int row=table.getSelectedRow();
+				if(j==0) {
 				if(row==-1) {
 					JOptionPane.showMessageDialog(null, "selectionner une ligne  ");
 					
@@ -214,7 +217,8 @@ public class GestionAbsence extends JFrame {
 				JOptionPane.showMessageDialog(null,"supression réussite");
 				updateTable();
 				
-			}
+			}}
+			
 		});
 		button_1.setIcon(new ImageIcon("C:\\Users\\USER\\Desktop\\projetJava\\supp.PNG"));
 		button_1.setBounds(186, 400, 48, 41);
@@ -241,6 +245,18 @@ public class GestionAbsence extends JFrame {
 		JLabel lblTableDabsence = new JLabel("table d'absence");
 		lblTableDabsence.setBounds(467, 117, 134, 14);
 		contentPane.add(lblTableDabsence);
+		
+		JButton button_3 = new JButton("");
+		button_3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				MainMenu m=new MainMenu();
+				m.setVisible(true);
+				dispose();
+			}
+		});
+		button_3.setIcon(new ImageIcon("C:\\Users\\USER\\Desktop\\projetJava\\backkk.PNG"));
+		button_3.setBounds(10, 101, 48, 35);
+		contentPane.add(button_3);
 	}
 	public void fillBox() {
 		java.sql.PreparedStatement stmt=null;
