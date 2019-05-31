@@ -82,7 +82,7 @@ public class GestionAbsence extends JFrame {
 				String nom=table.getModel().getValueAt(row,1).toString();
 				String date=table.getModel().getValueAt(row,2).toString();
 				String raison=table.getModel().getValueAt(row,3).toString();
-				
+				System.out.println(date);
 				nomBox.setSelectedItem(nom);
 				comboBox.setSelectedItem(raison);
 				dateChooser.setDateFormatString(date);
@@ -137,12 +137,13 @@ public class GestionAbsence extends JFrame {
 		dateChooser = new JDateChooser();
 		dateChooser.setBounds(93, 247, 141, 20);
 		contentPane.add(dateChooser);
-		
+		dateChooser.setDateFormatString("yyyy//dd");
 		JButton button = new JButton("");
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String nom=nomBox.getSelectedItem().toString();
 				String date=((JTextField) dateChooser.getDateEditor().getUiComponent()).getText();
+		
 				String raison=comboBox.getSelectedItem().toString();
 				PreparedStatement stmt=null;
 				try {
@@ -165,6 +166,8 @@ public class GestionAbsence extends JFrame {
 						e1.printStackTrace();
 					}
 				}
+				comboBox.setSelectedItem("selectionnez");
+				nomBox.setSelectedItem("selectionnez");
 				JOptionPane.showMessageDialog(null, "Ajout réussit");
 				
 				updateTable();
